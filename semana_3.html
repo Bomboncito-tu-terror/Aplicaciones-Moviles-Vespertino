@@ -38,30 +38,136 @@
 </nav>
  
 
+
 <main>
     <h2>Contenido de la Semana 3</h2>
     <p>Aquí puedes agregar detalles específicos sobre la Semana 3.</p>
     <h3>5 tareas de la semana 3 en código Dart</h3>
     <section>
-        <div class="section" onclick="toggleCode('code1')">
-            <p>Mostrar código 1</p>
+       <div class="colum">
+        <div class="section">
+            <p onclick="toggleCode('code1')">EJERCICIO 01</p>
             <div id="code1" class="code">
-                <p>void main(){<br>
-                &nbsp;&nbsp;print('hola mundo');<br>
-                }</p>
+                <p>
+                    import 'dart:io';<br>
+                    import 'dart:math'; // Importación del paquete math<br>
+                    <br>
+                    void main() {<br>
+                    &nbsp;&nbsp;// Solicitar el radio y la altura al usuario<br>
+                    &nbsp;&nbsp;print('Ingrese el radio del cilindro (r):');<br>
+                    &nbsp;&nbsp;double r = double.parse(stdin.readLineSync()!);<br>
+                    <br>
+                    &nbsp;&nbsp;print('Ingrese la altura del cilindro (h):');<br>
+                    &nbsp;&nbsp;double h = double.parse(stdin.readLineSync()!);<br>
+                    <br>
+                    &nbsp;&nbsp;// Calcular el área total y el volumen<br>
+                    &nbsp;&nbsp;double areaTotal = calcularAreaTotal(r, h);<br>
+                    &nbsp;&nbsp;double volumen = calcularVolumen(r, h);<br>
+                    <br>
+                    &nbsp;&nbsp;// Mostrar los resultados<br>
+                    &nbsp;&nbsp;print('El área total del cilindro es: ${areaTotal.toStringAsFixed(2)}');<br>
+                    &nbsp;&nbsp;print('El volumen del cilindro es: ${volumen.toStringAsFixed(2)}');<br>
+                    }<br>
+                    <br>
+                    double calcularAreaTotal(double r, double h) {<br>
+                    &nbsp;&nbsp;return 2 * pi * r * (r + h);<br>
+                    }<br>
+                    <br>
+                    double calcularVolumen(double r, double h) {<br>
+                    &nbsp;&nbsp;return pi * pow(r, 2) * h;<br>
+                    }<br>
+                </p>
             </div>
         </div>
-        <div class="section" onclick="toggleCode('code2')">
-            <p>Mostrar código 2</p>
-            <div id="code2" class="code">
-                <p>void main(){<br>
-                &nbsp;&nbsp;int a = 10;<br>
-                &nbsp;&nbsp;double b = 20.0;<br>
-                &nbsp;&nbsp;double c = a + b;<br>
-                &nbsp;&nbsp;print(c);<br>
-                }</p>
-            </div>
+        <div>
+            <a class="github-link" target="_blank" href="https://github.com/Bomboncito-tu-terror/Aplicaciones-Moviles-Vespertino/blob/main/proyecto_1.dart">Código en GitHub</a>
         </div>
+        <div>
+            <a class="download-link" target="_blank" href="proyecto_1.dart" download="proyecto_1.dart">Descargar Archivo</a>
+        </div>
+       </div>
+       
+       <div class="colum">   
+            <div class="section">
+                <p onclick="toggleCode('code2')">EJERCICIO 02</p>
+                <div id="code2" class="code">
+                    <p>
+                        import 'dart:io';<br>
+                        <br>
+                        void main() {<br>
+                        &nbsp;&nbsp;// Solicitar la cantidad de dinero a repartir<br>
+                        &nbsp;&nbsp;print('Ingrese la cantidad de dinero a repartir:');<br>
+                        &nbsp;&nbsp;double montoTotal = double.parse(stdin.readLineSync()!);<br>
+                        <br>
+                        &nbsp;&nbsp;// Cálculo de la cantidad que recibe cada hijo<br>
+                        &nbsp;&nbsp;double josue = 0.27 * montoTotal;<br>
+                        &nbsp;&nbsp;double daniel = 0.25 * montoTotal;<br>
+                        &nbsp;&nbsp;double tamar = 0.85 * josue;<br>
+                        &nbsp;&nbsp;double caleb = 0.23 * (josue + daniel);<br>
+                        <br>
+                        &nbsp;&nbsp;// Cálculo del dinero que queda para David<br>
+                        &nbsp;&nbsp;double david = montoTotal - (josue + tamar + caleb + daniel);<br>
+                        <br>
+                        &nbsp;&nbsp;// Mostrar los resultados<br>
+                        &nbsp;&nbsp;print('Dinero recibido por cada hijo:');<br>
+                        &nbsp;&nbsp;print('Josué: \$${josue.toStringAsFixed(2)}');<br>
+                        &nbsp;&nbsp;print('Daniel: \$${daniel.toStringAsFixed(2)}');<br>
+                        &nbsp;&nbsp;print('Tamar: \$${tamar.toStringAsFixed(2)}');<br>
+                        &nbsp;&nbsp;print('Caleb: \$${caleb.toStringAsFixed(2)}');<br>
+                        &nbsp;&nbsp;print('David: \$${david.toStringAsFixed(2)}');<br>
+                        }<br>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <a class="github-link" target="_blank" href="https://github.com/Bomboncito-tu-terror/Aplicaciones-Moviles-Vespertino/blob/main/proyecto_2.dart">Código en GitHub</a>
+            </div>
+            <div>
+                <a class="download-link" target="_blank" href="proyecto_2.dart" download="proyecto_1.dart">Descargar Archivo</a>
+            </div>
+       </div>
+
+       <div class="colum">
+            <div class="section">
+                <p onclick="toggleCode('code3')">EJERCICIO 03</p>
+                <div id="code3" class="code">
+                    <p>
+                        import 'dart:io';<br>
+                        <br>
+                        void main() {<br>
+                        &nbsp;&nbsp;// Solicitar la cantidad total de dinero a invertir<br>
+                        &nbsp;&nbsp;print('Ingrese el monto total de dinero a invertir:');<br>
+                        &nbsp;&nbsp;double montoTotal = double.parse(stdin.readLineSync()!);<br>
+                        <br>
+                        &nbsp;&nbsp;// Cálculo de los gastos en cada rubro<br>
+                        &nbsp;&nbsp;double alquiler = 0.23 * montoTotal;<br>
+                        &nbsp;&nbsp;double publicidad = 0.07 * montoTotal;<br>
+                        &nbsp;&nbsp;double transporte = 0.26 * montoTotal;<br>
+                        &nbsp;&nbsp;double serviciosFeriales = 0.12 * montoTotal;<br>
+                        &nbsp;&nbsp;double decoracion = 0.21 * montoTotal;<br>
+                        &nbsp;&nbsp;double gastosVarios = 0.11 * montoTotal;<br>
+                        <br>
+                        &nbsp;&nbsp;// Mostrar los resultados<br>
+                        &nbsp;&nbsp;print('Gastos de la empresa "Juanito Import" SAC:');<br>
+                        &nbsp;&nbsp;print('Alquiler de espacio en la feria: \$${alquiler.toStringAsFixed(2)}');<br>
+                        &nbsp;&nbsp;print('Publicidad: \$${publicidad.toStringAsFixed(2)}');<br>
+                        &nbsp;&nbsp;print('Transporte: \$${transporte.toStringAsFixed(2)}');<br>
+                        &nbsp;&nbsp;print('Servicios feriales: \$${serviciosFeriales.toStringAsFixed(2)}');<br>
+                        &nbsp;&nbsp;print('Decoración: \$${decoracion.toStringAsFixed(2)}');<br>
+                        &nbsp;&nbsp;print('Gastos varios: \$${gastosVarios.toStringAsFixed(2)}');<br>
+                        }<br>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <a class="github-link" target="_blank" href="https://github.com/Bomboncito-tu-terror/Aplicaciones-Moviles-Vespertino/blob/main/proyecto_3.dart">Código en GitHub</a> 
+            </div>
+            <div>
+                <a class="download-link" target="_blank" href="proyecto_3.dart" download="proyecto_1.dart">Descargar Archivo</a>
+            </div>
+       </div>
+       
+
     </section>
 </main>
 
@@ -72,16 +178,14 @@
          submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
      }
  </script>
- <script>
+
+<script>
     function toggleCode(codeId) {
         const codeElement = document.getElementById(codeId);
-        if (codeElement.style.display === "none" || codeElement.style.display === "") {
-            codeElement.style.display = "block";
-        } else {
-            codeElement.style.display = "none";
-        }
+        codeElement.style.display = (codeElement.style.display === "none" || codeElement.style.display === "") ? "block" : "none";
     }
 </script>
  
  </body>
  </html>
+
