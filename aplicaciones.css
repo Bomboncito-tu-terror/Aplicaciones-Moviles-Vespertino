@@ -1,0 +1,97 @@
+/* Estilo general para el cuerpo */
+body {
+ font-family: Arial, sans-serif;
+ margin: 0;
+ background-color: #f9f9f9;
+ color: #333;
+}
+
+/* Estilos para el encabezado */
+header {
+ background-color: #333;
+ color: white;
+ padding: 10px 0;
+ text-align: center;
+}
+
+/* Estilo del menú de navegación */
+nav {
+ display: flex;
+ flex-direction: column;
+ width: 200px;
+ background-color: #444;
+ color: white;
+ padding: 15px;
+ height: 100vh;
+ position: fixed;
+}
+
+nav a {
+ color: white;
+ text-decoration: none;
+ margin: 15px 0;
+ padding: 10px;
+ transition: background-color 0.3s;
+}
+
+nav a:hover {
+ background-color: #555;
+}
+
+/* Estilos del submenu */
+.submenu {
+ display: none; /* Oculto por defecto */
+ margin-left: 10px; /* Indentación para el submenú */
+}
+
+.submenu a {
+ margin: 5px 0; /* Espaciado entre semanas */
+ display: block; /* Asegurarse de que cada enlace ocupe toda la línea */
+}
+
+/* Estilos para el contenido principal */
+main {
+ margin-left: 220px; /* Espacio para el menú lateral */
+ padding: 20px;
+}
+
+/* Estilos para los encabezados en el contenido */
+h2 {
+ font-size: 2em;
+ margin-bottom: 20px;
+}
+
+h3 {
+ font-size: 1.5em;
+ margin-top: 20px;
+ margin-bottom: 10px;
+ border-bottom: 2px solid #ddd; /* Línea inferior para separar secciones */
+ padding-bottom: 5px; /* Espacio entre el texto y la línea */
+}
+
+/* Estilo para los párrafos */
+p {
+ line-height: 1.6;
+ margin-bottom: 15px; /* Espaciado inferior para los párrafos */
+}
+
+/* Estilos para listas */
+ul, ol {
+ margin-left: 20px; /* Indentación para listas */
+ margin-bottom: 20px; /* Espaciado inferior para listas */
+}
+
+/* Espaciado para los ítems de lista */
+li {
+ margin-bottom: 10px; /* Espaciado entre elementos de lista */
+}
+
+/* Estilo para el dropdown */
+.dropdown {
+ cursor: pointer; /* Cambiar cursor al pasar por encima */
+ margin-top: 8%;
+}
+
+.dropdown:hover {
+ background-color: rgb(52, 53, 53);
+}

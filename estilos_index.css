@@ -1,0 +1,80 @@
+body {
+ font-family: Arial, sans-serif;
+ margin: 0;
+ background-color: #f9f9f9;
+}
+
+header {
+ background-color: #333;
+ color: white;
+ padding: 15px 0;
+ text-align: center;
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+ display: flex;
+ flex-direction: column;
+ width: 200px;
+ background-color: #444;
+ color: white;
+ padding: 20px;
+ height: 100vh;
+ position: fixed;
+ box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+ color: white;
+ text-decoration: none;
+ margin: 15px 0;
+ padding: 10px;
+ border-radius: 5px;
+ transition: background-color 0.3s;
+}
+
+nav a:hover {
+ background-color: rgb(52, 53, 53);
+}
+
+.submenu {
+ display: none; /* Oculto por defecto */
+ margin-left: 10px; /* Indentación para el submenú */
+}
+
+.submenu a {
+ margin: 5px 0; /* Espaciado entre semanas */
+ display: block; /* Asegurarse de que cada enlace ocupe toda la línea */
+ padding: 8px; /* Espaciado interno */
+ border-radius: 4px; /* Bordes redondeados */
+ background-color: #555; /* Color de fondo */
+ transition: background-color 0.3s; /* Efecto de transición */
+}
+
+.submenu a:hover {
+ background-color: rgb(70, 70, 70);
+}
+
+.dropdown {
+ cursor: pointer; /* Cambiar cursor al pasar por encima */
+ margin-top: 10px;
+ padding: 10px;
+ border-radius: 5px;
+ transition: background-color 0.3s;
+}
+
+.dropdown:hover {
+ background-color: rgb(52, 53, 53);
+}
+
+main {
+ margin-left: 220px; /* Espacio para el menú lateral */
+ padding: 20px;
+}
+img{
+ width: 1680px;
+ height: 700px;
+}
+main h2{
+ text-align: center;
+}
