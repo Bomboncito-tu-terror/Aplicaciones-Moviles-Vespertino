@@ -62,3 +62,44 @@
 .section:hover {
     background-color: #d1e7ff;
 }
+.github-link {
+    display: block;
+    margin-top: 5px;
+    padding: 8px;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.github-link:hover {
+    background-color: #218838;
+}
+
+.section {
+    margin-bottom: 20px; /* Espacio entre tareas */
+}
+
+.github-link {
+    display: block; /* Esto asegura que cada enlace esté en una nueva línea */
+    margin-top: 5px; /* Espacio adicional entre el código y el enlace */
+}
+.colum{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+}
+.download-link {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.download-link:hover {
+    background-color: #0056b3;
+}
