@@ -103,3 +103,6 @@
 .download-link:hover {
     background-color: #0056b3;
 }
+.code p{
+    text-align: left;
+}
