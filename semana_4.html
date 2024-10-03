@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semana 1 - Aplicaciones Móviles Vespertino</title>
     <link rel="stylesheet" href="estilos_index.css">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos_04.css">
 </head>
 <body>
 
@@ -37,10 +37,246 @@
   </div>
 </nav>
  
- <main>
-     <h2>Contenido de la Semana 4</h2>
-     <p>Aquí puedes agregar detalles específicos sobre la Semana 1.</p>
- </main>
+
+
+<main>
+    <h2>Contenido de la Semana 4</h2>
+    <p>Aquí puedes agregar detalles específicos sobre la Semana 4.</p>
+    <h3>3 ejercicios de la semana 4 en código Dart</h3>
+    <section>
+       <div class="colum">
+        <div class="section">
+            <p onclick="toggleCode('code1')">EJERCICIO 01</p>
+            <div id="code1" class="code">
+                <p>
+                    <pre><code>
+                    import 'dart:io';
+
+                    double obtenerPension(String categoria) {
+                      switch (categoria.toUpperCase()) {
+                        case 'A':
+                          return 550.0;
+                        case 'B':
+                          return 500.0;
+                        case 'C':
+                          return 460.0;
+                        case 'D':
+                          return 400.0;
+                        default:
+                          print('Categoría no válida');
+                          return 0.0;
+                      }
+                    }
+                    
+                    
+                    double obtenerDescuento(double promedio) {
+                      if (promedio >= 18.0 && promedio <= 20.0) {
+                        return 0.15;
+                      } else if (promedio >= 16.0 && promedio < 18.0) {
+                        return 0.12;
+                      } else if (promedio >= 14.0 && promedio < 16.0) {
+                        return 0.10;
+                      } else {
+                        return 0.0;
+                      }
+                    }
+                    
+                    void main() {
+                    
+                      print('Ingrese la categoría del estudiante (A, B, C, D): ');
+                      String? categoria = stdin.readLineSync();
+                    
+                    
+                      print('Ingrese el promedio ponderado del ciclo anterior: ');
+                      double? promedio = double.parse(stdin.readLineSync()!);
+                    
+                     
+                      double pensionBase = obtenerPension(categoria!);
+                    
+                      if (pensionBase == 0.0) {
+                        return;
+                      }
+                    
+                      double porcentajeDescuento = obtenerDescuento(promedio);
+                    
+                    
+                      double descuento = pensionBase * porcentajeDescuento;
+                      double nuevaPension = pensionBase - descuento;
+                    
+                    
+                      print('Pensión base: S/. $pensionBase');
+                      print('Descuento aplicado: S/. ${descuento.toStringAsFixed(2)}');
+                      print('Nueva pensión: S/. ${nuevaPension.toStringAsFixed(2)}');
+                    }
+                </code></pre>
+                </p>
+            </div>
+        </div>
+        <div>
+            <a class="github-link" target="_blank" href="https://github.com/Bomboncito-tu-terror/Aplicaciones-Moviles-Vespertino/blob/main/ejercicio_01.dart">Código en GitHub</a>
+        </div>
+        <div>
+            <a class="download-link" target="_blank" href="ejercicio_01.dart" download="proyecto_1.dart">Descargar Archivo</a>
+        </div>
+       </div>
+       
+       <div class="colum">   
+            <div class="section">
+                <p onclick="toggleCode('code2')">EJERCICIO 02</p>
+                <div id="code2" class="code">
+                    <p>
+                        <pre><code>
+                        import 'dart:io';
+
+
+                        double obtenerDescuento(int nivel, int edad) {
+                          if (edad > 18) {
+                            switch (nivel) {
+                              case 1:
+                                return 0.40; 
+                              case 2:
+                                return 0.30; 
+                              case 3:
+                                return 0.15;
+                              default:
+                                return 0.0; 
+                            }
+                          } else if (edad == 18) {
+                        
+                            switch (nivel) {
+                              case 1:
+                                return 0.60; 
+                              case 2:
+                                return 0.40; 
+                              case 3:
+                                return 0.20;
+                              default:
+                                return 0.0; 
+                            }
+                          } else {
+                            return 0.0;
+                          }
+                        }
+                        
+                        void main() {
+                          
+                          print('Ingrese la edad del hombre: ');
+                          int? edad = int.parse(stdin.readLineSync()!);
+                        
+                        
+                          print('Ingrese el nivel del sistema de beneficio (1, 2, 3 o mayor): ');
+                          int? nivel = int.parse(stdin.readLineSync()!);
+                        
+                         
+                          double costoBase;
+                          if (edad > 18) {
+                            costoBase = 350.0;
+                          } else if (edad == 18) {
+                            costoBase = 200.0;
+                          } else {
+                            print('Edad no válida para la libreta militar.');
+                            return;
+                          }
+                        
+                        
+                          double porcentajeDescuento = obtenerDescuento(nivel, edad);
+                        
+                         
+                          double descuento = costoBase * porcentajeDescuento;
+                          double valorFinal = costoBase - descuento;
+                        
+                         
+                          print('Costo base de la libreta: S/. $costoBase');
+                          print('Descuento aplicado: S/. ${descuento.toStringAsFixed(2)}');
+                          print('Valor final a pagar: S/. ${valorFinal.toStringAsFixed(2)}');
+                        }
+                    </code></pre> 
+                    </p>
+                </div>
+            </div>
+            <div>
+                <a class="github-link" target="_blank" href="https://github.com/Bomboncito-tu-terror/Aplicaciones-Moviles-Vespertino/blob/main/ejercicio_02.dart">Código en GitHub</a>
+            </div>
+            <div>
+                <a class="download-link" target="_blank" href="ejercicio_02.dart" download="proyecto_1.dart">Descargar Archivo</a>
+            </div>
+       </div>
+
+       <div class="colum">
+            <div class="section">
+                <p onclick="toggleCode('code3')">EJERCICIO 03</p>
+                <div id="code3" class="code">
+                    <p>
+                        <pre><code>
+                        import 'dart:io';
+                        double calcularComision(double importeVendido) {
+                        if (importeVendido > 15000) {
+                            return importeVendido * 0.07; 
+                        } else {
+                            return importeVendido * 0.05; 
+                        }
+                        }
+
+
+                        double calcularBonificacion(int numHijos) {
+                        if (numHijos < 5) {
+                            return numHijos * 25.0; 
+                        } else {
+                            return numHijos * 22.0;
+                        }
+                        }
+
+                        double calcularDescuento(double sueldoBruto) {
+                        if (sueldoBruto > 3500) {
+                            return sueldoBruto * 0.15; 
+                        } else {
+                            return sueldoBruto * 0.11; 
+                        }
+                        }
+
+                        void main() {
+                        const double sueldoBasico = 600.0;
+
+                        print('Ingrese el importe total vendido: ');
+                        double? importeVendido = double.parse(stdin.readLineSync()!);
+
+                        print('Ingrese el número de hijos: ');
+                        int? numHijos = int.parse(stdin.readLineSync()!);
+
+                        double comision = calcularComision(importeVendido);
+
+                        double bonificacion = calcularBonificacion(numHijos);
+
+                        double sueldoBruto = sueldoBasico + comision + bonificacion;
+
+                        double descuento = calcularDescuento(sueldoBruto);
+
+                        double sueldoNeto = sueldoBruto - descuento;
+
+                        
+                        print('Sueldo básico: S/. $sueldoBasico');
+                        print('Comisión: S/. ${comision.toStringAsFixed(2)}');
+                        print('Bonificación: S/. ${bonificacion.toStringAsFixed(2)}');
+                        print('Sueldo bruto: S/. ${sueldoBruto.toStringAsFixed(2)}');
+                        print('Descuento: S/. ${descuento.toStringAsFixed(2)}');
+                        print('Sueldo neto: S/. ${sueldoNeto.toStringAsFixed(2)}');
+                        }
+                    </code></pre> 
+                    </p>
+                </div>
+            </div>
+            <div>
+                <a class="github-link" target="_blank" href="https://github.com/Bomboncito-tu-terror/Aplicaciones-Moviles-Vespertino/blob/main/ejercicio_03.dart">Código en GitHub</a> 
+            </div>
+            <div>
+                <a class="download-link" target="_blank" href="ejercicio_03.dart" download="proyecto_1.dart">Descargar Archivo</a>
+            </div>
+       </div>
+       
+
+    </section>
+</main>
+
  
  <script>
      function toggleSubmenu() {
@@ -48,6 +284,13 @@
          submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
      }
  </script>
+
+<script>
+    function toggleCode(codeId) {
+        const codeElement = document.getElementById(codeId);
+        codeElement.style.display = (codeElement.style.display === "none" || codeElement.style.display === "") ? "block" : "none";
+    }
+</script>
  
  </body>
  </html>
